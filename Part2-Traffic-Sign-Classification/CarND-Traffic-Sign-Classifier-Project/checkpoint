@@ -1,2 +1,2 @@
-model_checkpoint_path: "lenet"
-all_model_checkpoint_paths: "lenet"
+model_checkpoint_path: "/Users/kevinlu/Documents/Udacity-Self-Driving-CarND/Part2-Traffic-Sign-Classification/CarND-Traffic-Sign-Classifier-Project/lenet_spatial"
+all_model_checkpoint_paths: "/Users/kevinlu/Documents/Udacity-Self-Driving-CarND/Part2-Traffic-Sign-Classification/CarND-Traffic-Sign-Classifier-Project/lenet_spatial"

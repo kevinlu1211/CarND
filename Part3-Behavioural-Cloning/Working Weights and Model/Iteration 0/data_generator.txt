@@ -1,0 +1,83 @@
+### THIS IS A WORKING VERSION ###
+
+def generate_data(df_row): 
+    # Define the parameters for data generation
+    TRANS_X_RANGE = 100
+    TRANS_Y_RANGE = 40
+    TRANS_ANGLE = 0.15
+    CAMERA_STEERING_ANGLE_OFFSET = 0.2
+    
+    # Get the image and steering
+    path = df_row.image_path
+    camera = path.split('/')[1].split("_")[0] # see if it is left, center or right
+    steering_angle = df_row.steering
+
+    # Show the image
+    image_data = mpimg.imread(path)
+
+    # Randomly compute a X,Y translation    
+
+    # -TRANS_X_RANGE/2 <= x_translation <= TRANS_X_RANGE/2 so -50 to 50
+    x_translation = (TRANS_X_RANGE * np.random.uniform()) - (TRANS_X_RANGE / 2) 
+
+    # -TRANS_Y_RANGE/2 <= y_translation <= TRANS_Y_RANGE/2 so -20 to 20
+    y_translation = (TRANS_Y_RANGE * np.random.uniform()) - (TRANS_Y_RANGE / 2)
+
+    # Do the translation
+    image_data = translate_image(image_data, x_translation, y_translation)
+
+    # Calculate the new angle
+
+    # Note here that if we translate left, then we would need to increase steering
+    # Think of it as we are closer to the obstacle on the left, and vice versa for translate right
+    new_steering_angle =  steering_angle + ((x_translation/TRANS_X_RANGE) * 2) * TRANS_ANGLE
+#     print("x_translation is: {0}".format(x_translation))
+    if camera == "left":
+        new_steering_angle += CAMERA_STEERING_ANGLE_OFFSET
+    elif camera == "right":
+        new_steering_angle -= CAMERA_STEERING_ANGLE_OFFSET
+    else:
+        new_steering_angle = new_steering_angle
+
+    # Now to make sure we can generalize to both left and right side 
+
+    if np.random.uniform() <= 0.5:
+        image_data = np.fliplr(image_data)
+        new_steering_angle = -new_steering_angle
+    
+    # Crop the image
+    image_data = crop_image(image_data)
+    
+    return(image_data, new_steering_angle)
+
+# Now lets create some new data and append it to the data frame
+def create_data_set(data_generator, n_times, discard_prob, discard_range):
+    """
+    ::params data_generator: is the function used to generate the data
+             
+             n_times: is the number of times that the data should be generated
+             
+             discard_prob: is the probability that an angle between the discard_range 
+             
+             should be discarded
+             
+             discard_range: is the range of steering_angles that should be discarded
+             
+    """
+    X = []
+    y = []
+    for i in range(n_times):
+        image_row = df.iloc[np.random.randint(df.shape[0])]
+        generated_image_data, generated_steering_angle = data_generator(image_row)
+        if (discard_range[0] <= generated_steering_angle <= discard_range[1]):
+            if np.random.uniform() > discard_prob:
+                X.append(generated_image_data)
+                y.append(generated_steering_angle)
+        else:
+            X.append(generated_image_data)
+            y.append(generated_steering_angle)
+        if i % 1000 == 0:
+            print("Processed {0}/{1} data points".format(i, n_times))
+    return X, y
+
+X, y = create_data_set(data_generator_2, 80000, 0.5, (-0.15, 0.15))

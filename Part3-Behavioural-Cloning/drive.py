@@ -37,7 +37,7 @@ def telemetry(sid, data):
     imgString = data["image"]
     image = Image.open(BytesIO(base64.b64decode(imgString)))
     image_array = np.asarray(image)
-    image_array = resize_image(image_array)
+    image_array = crop_image(image_array)
     transformed_image_array = image_array[None, :, :, :]
     transformed_image_array = preprocess_image(transformed_image_array)
     # This model currently assumes that the features of the model are just the images. Feel free to change this.
@@ -86,42 +86,24 @@ def normalize_image(images):
     y_sd = np.sqrt(np.var(y_col))
     u_sd = np.sqrt(np.var(u_col))
     v_sd = np.sqrt(np.var(v_col))
-    
-    #     print("y_mean, u_mean, v_mean before normalization")
-    #     print(y_mean, u_mean, v_mean)
-    
-    #     print("y_sd, u_sd, v_sd before normalization")
-    #     print(y_sd, u_sd, v_sd)
-    
+        
     images[:,:,:,0] = (images[:,:,:,0] - y_mean)/y_sd
     images[:,:,:,1] = (images[:,:,:,1] - u_mean)/u_sd
     images[:,:,:,2] = (images[:,:,:,2] - v_mean)/v_sd
-    
-    # Get the YUV columns
-    y_col = images[:,:,:,0]
-    u_col = images[:,:,:,1]
-    v_col = images[:,:,:,2]
-    
-    # Find the mean and sd
-    y_mean = np.mean(y_col)
-    u_mean = np.mean(u_col)
-    v_mean = np.mean(v_col)
-    y_sd = np.sqrt(np.var(y_col))
-    u_sd = np.sqrt(np.var(u_col))
-    v_sd = np.sqrt(np.var(v_col))
-    
-    #     print("y_mean, u_mean, v_mean after normalization")
-    #     print(y_mean, u_mean, v_mean)
-    
-    #     print("y_sd, u_sd, v_sd after normalization")
-    #     print(y_sd, u_sd, v_sd)
     return(images)
 
 
 # In[4]:
 
-def preprocess_image(images):
-    return normalize_image(rgb2yuv(images))
+def preprocess_image(images_data):
+    return normalize_image(rgb2yuv(images_data))
+
+# Crop the image to get rid of the non-important features such as the car hood and the sky
+def crop_image(image_data):
+    image = Image.fromarray(image_data)
+    
+    cropped_image = np.asarray(image.crop((50,40,270,120)))
+    return(cropped_image)
 
 def resize_image(image_data):
     width, height = image_data.shape[1], image_data.shape[0]
