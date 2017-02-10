@@ -88,7 +88,7 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 
 Here is a visualization of the final model architecture
 
-![alt text](https://github.com/kevinlu1211/CarND/tree/master/Part3-Behavioural-Cloning/model.png)
+![Model Visualization](https://github.com/kevinlu1211/CarND/tree/master/Part3-Behavioural-Cloning/model.png)
 
 #### 3. Creation of the Training Set & Training Process
 
