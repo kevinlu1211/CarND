@@ -56,7 +56,10 @@ The goals / steps of this project are the following:
 [image3]: ./README_images/stacked_image.png "Stacked Image"
 [image4]: ./README_images/thresholded_stacked_image.png "Thresholded Stacked Image"
 [image5]: ./README_images/perspective_transformed_points.png "Thresholded Stacked Image"
-[image6]: ./README_images/perspective_transformed_image.png "Thresholded Stacked Image"
+[image6]: ./README_images/perspective_transformed_binary.png "Binary Stacked Image"
+[image7]: ./README_images/binary_fitted_lanes.png "Binary Fitted Lane Image"
+[image8]: ./README_images/filled_lane_line.png "Filled Lane Line"
+
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
 ###Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
@@ -114,19 +117,20 @@ I verified that my perspective transform was working as expected by drawing the 
 
 ####4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
-Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
+Then I fit a 2 degree polynomial function on the perspective transformed binary image in cells x-x and I got this as a result
 
-![alt text][image5]
+
+![alt text][image7]
 
 ####5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
-I did this in lines # through # in my code in `my_other_file.py`
+The radius of curvature and the offset from the center of lane were calculated in cells x-x. The radius of curvature was calculated from the equation taken from [here](http://www.intmath.com/applications-differentiation/8-radius-curvature.php) and the offset was simply calculated by taking the difference in pixel values between the base of the left and right lane lines, then converting that value into meters
 
 ####6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
-I implemented this step in lines # through # in my code in `yet_another_file.py` in the function `map_lane()`.  Here is an example of my result on a test image:
+I implemented this step in lines in cell.  Here is an example of my result on a test image:
 
-![alt text][image6]
+![alt text][image8]
 
 ---
 
@@ -134,7 +138,7 @@ I implemented this step in lines # through # in my code in `yet_another_file.py`
 
 ####1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
-Here's a [link to my video result](./project_video.mp4)
+Here's a [link to my video result](./project_video_result.mp4)
 
 ---
 
@@ -142,5 +146,5 @@ Here's a [link to my video result](./project_video.mp4)
 
 ####1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
+The main problem by far were the difference in lighting changes, and also when a vehicle passes near the car, the warped binary image will include images of that car and a result the pipeline will fail to find the lane lines. I could make this more robust by implementing a function/or using `HoughLinesP` to detect the lines in the binary transformed image, and getting rid of the other pixels. As for the lighting changes, this is a bit harder to deal with but I believe that with some research I will be able to use a variation of different color spaces to more accurately detect the lane lines in changes in lighting conditions. 
 
