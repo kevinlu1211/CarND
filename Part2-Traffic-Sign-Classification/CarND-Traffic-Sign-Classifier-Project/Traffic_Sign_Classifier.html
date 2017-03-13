@@ -11759,23 +11759,6 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Things to improve on:</span>
-<span class="c1"># 1) Create more images so that the model isn&#39;t bias towards the more common images</span>
-<span class="c1"># 2) Create more training data by reading Spatial Transformers Haloi</span>
-<span class="c1"># 3) Create a condition for when to stop training to avoid overfitting by reading </span>
-<span class="c1">#    Joshua Bengio</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -11788,7 +11771,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Load pickled data</span>
@@ -11826,14 +11809,13 @@ div#notebook {
 <li><code>'sizes'</code> is a list containing tuples, (width, height) representing the the original width and height the image.</li>
 <li><code>'coords'</code> is a list containing tuples, (x1, y1, x2, y2) representing coordinates of a bounding box around the sign in the image. <strong>THESE COORDINATES ASSUME THE ORIGINAL IMAGE. THE PICKLED DATA CONTAINS RESIZED VERSIONS (32 by 32) OF THESE IMAGES</strong></li>
 </ul>
-<p>Complete the basic data summary below.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -11880,27 +11862,14 @@ Number of classes = 43
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Visualize the German Traffic Signs Dataset using the pickled file(s). This is open ended, suggestions include: plotting traffic sign images, plotting the count of each sign, etc.</p>
-<p>The <a href="http://matplotlib.org/">Matplotlib</a> <a href="http://matplotlib.org/examples/index.html">examples</a> and <a href="http://matplotlib.org/gallery.html">gallery</a> pages are a great resource for doing visualizations in Python.</p>
-<p><strong>NOTE:</strong> It's recommended you start with something simple first. If you wish to do more, come back to it after you've completed the rest of the sections.</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Data exploration visualization goes here.</span>
-<span class="c1">### Feel free to use as many code cells as needed.</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">random</span>
+
 <span class="c1"># Visualizations will be shown in the notebook.</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
 </pre></div>
@@ -11912,7 +11881,7 @@ Number of classes = 43
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Lets see the distribution of the images</span>
@@ -11935,7 +11904,7 @@ Number of classes = 43
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[6]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[4]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -12116,7 +12085,6 @@ PxouGL63rwvVAAAAAElFTkSuQmCC
 <li>Generate fake data.</li>
 </ul>
 <p>Here is an example of a <a href="http://yann.lecun.com/exdb/publis/pdf/sermanet-ijcnn-11.pdf">published baseline model on this problem</a>. It's not required to be familiar with the approach used in the paper but, it's good practice to try to read papers like these.</p>
-<p><strong>NOTE:</strong> The LeNet-5 implementation shown in the <a href="https://classroom.udacity.com/nanodegrees/nd013/parts/fbf77062-5703-404e-b60c-95b78b2f3f9e/modules/6df7ae49-c61c-4bb2-a23e-6527e69209ec/lessons/601ae704-1035-4287-8b11-e2c2716217ad/concepts/d4aca031-508f-4e0b-b493-e7b706120f81">classroom</a> at the end of the CNN lesson is a solid starting point. You'll have to change the number of classes and possibly the preprocessing, but aside from that it's plug and play!</p>
 
 </div>
 </div>
@@ -12133,7 +12101,7 @@ PxouGL63rwvVAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># First convert the RBG to YUV</span>
@@ -12149,7 +12117,7 @@ PxouGL63rwvVAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train_yuv</span> <span class="o">=</span> <span class="n">rgb2yuv</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
@@ -12163,7 +12131,7 @@ PxouGL63rwvVAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Confirm that we did it correctly</span>
@@ -12179,11 +12147,11 @@ PxouGL63rwvVAAAAAElFTkSuQmCC
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[12]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[7]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.image.AxesImage at 0x10be02b38&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x12e818978&gt;</pre>
 </div>
 
 </div>
@@ -13708,7 +13676,7 @@ o41OSBsIb7TRRhudkDYQ3mijjTY6IW0gvNFGG210QtpAeKONNtrohLSB8EYbbbTRCen/A6kthDus
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Looks pretty good</span>
@@ -13723,11 +13691,11 @@ o41OSBsIb7TRRhudkDYQ3mijjTY6IW0gvNFGG210QtpAeKONNtrohLSB8EYbbbTRCen/A6kthDus
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[13]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[8]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.image.AxesImage at 0x10becc198&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x12e96c6d8&gt;</pre>
 </div>
 
 </div>
@@ -14441,7 +14409,7 @@ DQgPDQ0NrVEDwkNDQ0Nr1IDw0NDQ0Bo1IDw0NDS0Rv0/v4rkNoEAxA0AAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Now normalize it by subtracting the mean and dividing by the variance</span>
@@ -14481,7 +14449,7 @@ DQgPDQ0NrVEDwkNDQ0Nr1IDw0NDQ0Bo1IDw0NDS0Rv0/v4rkNoEAxA0AAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Normalize the YUV spaced images</span>
@@ -14496,7 +14464,7 @@ DQgPDQ0NrVEDwkNDQ0Nr1IDw0NDQ0Bo1IDw0NDS0Rv0/v4rkNoEAxA0AAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">X_train_yuv_normalize</span><span class="p">[</span><span class="mi">0</span><span class="p">][:,:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;gray&#39;</span><span class="p">)</span>
@@ -14510,11 +14478,11 @@ DQgPDQ0NrVEDwkNDQ0Nr1IDw0NDQ0Bo1IDw0NDS0Rv0/v4rkNoEAxA0AAAAASUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[16]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[11]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.image.AxesImage at 0x10c0805f8&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x12eaaae10&gt;</pre>
 </div>
 
 </div>
@@ -15249,14 +15217,10 @@ I preprocessed the data by first converting it to a YUV color space, and then st
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Generate data additional data (OPTIONAL!)</span>
-<span class="c1">### and split the data into training/validation/testing sets here.</span>
-<span class="c1">### Feel free to use as many</span>
-
-<span class="c1"># First lets split into a validation and train set</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># First lets split into a validation and train set</span>
 
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
 <span class="n">X_train_yuv_normalize</span><span class="p">,</span> <span class="n">X_validation_yuv_normalize</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_validation</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_train_yuv_normalize</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span>
@@ -15329,7 +15293,7 @@ As the data that we were provided has already been split into the train and test
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Define your architecture here.</span>
@@ -15415,13 +15379,13 @@ As the data that we were provided has already been split into the train and test
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Inception-(but-not-really)">Inception (but not really)<a class="anchor-link" href="#Inception-(but-not-really)">&#182;</a></h2>
+<h2 id="Inception-(but-only-1-layer-as-my-computer-can't-train-an-Inception-model-as-it-would-take-too-long)">Inception (but only 1 layer as my computer can't train an Inception model as it would take too long)<a class="anchor-link" href="#Inception-(but-only-1-layer-as-my-computer-can't-train-an-Inception-model-as-it-would-take-too-long)">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Using the inception module</span>
@@ -15606,7 +15570,7 @@ As the data that we were provided has already been split into the train and test
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Copyright 2016 The TensorFlow Authors. All Rights Reserved.</span>
@@ -15793,7 +15757,7 @@ As the data that we were provided has already been split into the train and test
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">LeNet_with_spatial_transform</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">keep_prob</span><span class="p">):</span>
@@ -15875,8 +15839,6 @@ As the data that we were provided has already been split into the train and test
     <span class="c1"># Pass this into Lenet</span>
     <span class="n">logits</span> <span class="o">=</span> <span class="n">LeNet</span><span class="p">(</span><span class="n">V</span><span class="p">,</span> <span class="n">keep_prob</span><span class="p">)</span>
     <span class="k">return</span><span class="p">(</span><span class="n">logits</span><span class="p">)</span>
-    
-    
 </pre></div>
 
 </div>
@@ -15899,8 +15861,7 @@ As the data that we were provided has already been split into the train and test
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong></p>
-<p>Below is the architecture that I have used for my prediction of the test set:</p>
+<h6 id="Answer:"><strong>Answer:</strong><a class="anchor-link" href="#Answer:">&#182;</a></h6><p>Below is the architecture that I have used for my prediction of the test set:</p>
 
 <pre><code># Spatial transformer (data first goes in here, the goal is to find an affine transform
                        which helps the neural network classify)
@@ -15981,14 +15942,14 @@ bias were initalized to 0
 optimizer used was the Adam Optimizer
 
 Validation accuracy caps at around 99.04% with 20 epochs
-Test accuracy is at around 93.65%</code></pre>
+Test accuracy is at around 96%</code></pre>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Train your model here.</span>
@@ -16003,7 +15964,16 @@ Test accuracy is at around 93.65%</code></pre>
 <span class="n">one_hot_y</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">one_hot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">43</span><span class="p">)</span>
 
 <span class="c1"># Define the learning rate</span>
-<span class="n">rate</span> <span class="o">=</span> <span class="mi">1</span><span class="n">e</span><span class="o">-</span><span class="mi">3</span>
+<span class="c1"># 31367 samples in training set =&gt; number of steps/epoch = 31367/64 ~= 490</span>
+
+<span class="n">global_step</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">trainable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">increment_global_step_op</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">global_step</span><span class="p">,</span> <span class="n">global_step</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># or </span>
+<span class="n">increment_global_step_op</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">assign_add</span><span class="p">(</span><span class="n">global_step</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">boundaries</span> <span class="o">=</span> <span class="p">[</span><span class="mi">500</span><span class="p">,</span> <span class="mi">4000</span><span class="p">,</span> <span class="mi">9800</span><span class="p">]</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="n">e</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="n">e</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="n">e</span><span class="o">-</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">learning_rate</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">piecewise_constant</span><span class="p">(</span><span class="n">global_step</span><span class="p">,</span> <span class="n">boundaries</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
 
 <span class="c1"># Define the neural network graph</span>
 <span class="n">logits</span> <span class="o">=</span> <span class="n">LeNet_with_spatial_transform</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">keep_prob</span><span class="p">)</span>
@@ -16014,7 +15984,7 @@ Test accuracy is at around 93.65%</code></pre>
 <span class="n">loss_operation</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">reduce_mean</span><span class="p">(</span><span class="n">cross_entropy</span><span class="p">)</span>
 
 <span class="c1"># Define optimizer</span>
-<span class="n">optimizer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">AdamOptimizer</span><span class="p">(</span><span class="n">learning_rate</span> <span class="o">=</span> <span class="n">rate</span><span class="p">)</span>
+<span class="n">optimizer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">AdamOptimizer</span><span class="p">(</span><span class="n">learning_rate</span> <span class="o">=</span> <span class="n">learning_rate</span><span class="p">)</span>
 <span class="n">training_operation</span> <span class="o">=</span> <span class="n">optimizer</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span><span class="n">loss_operation</span><span class="p">)</span>
 
 <span class="c1"># Define accuracy</span>
@@ -16056,7 +16026,7 @@ theta.get_shape()
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Helper function for evaluation</span>
@@ -16087,13 +16057,13 @@ theta.get_shape()
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Now finally start the training</span>
 <span class="kn">from</span> <span class="nn">sklearn.utils</span> <span class="k">import</span> <span class="n">shuffle</span>
 <span class="kn">import</span> <span class="nn">os</span>
-<span class="n">EPOCHS</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">EPOCHS</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">BATCH_SIZE</span> <span class="o">=</span> <span class="mi">64</span>
 <span class="n">LENET_MODEL</span> <span class="o">=</span> <span class="s1">&#39;lenet&#39;</span>
 <span class="n">LENET_WITH_SPATIAL_TRANSFORM_MODEL</span> <span class="o">=</span> <span class="s1">&#39;lenet_spatial&#39;</span>
@@ -16112,49 +16082,57 @@ theta.get_shape()
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="n">LOAD</span><span class="p">:</span>
-    <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
-        <span class="n">saver</span><span class="o">.</span><span class="n">restore</span><span class="p">(</span><span class="n">sess</span><span class="p">,</span> <span class="n">SAVE_FILE</span><span class="p">)</span>
-        <span class="n">num_examples</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_train_yuv_normalize</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Training...&quot;</span><span class="p">)</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">EPOCHS</span><span class="p">):</span>
-            <span class="n">X_train_yuv_normalize</span><span class="p">,</span> <span class="n">y_train</span> <span class="o">=</span> <span class="n">shuffle</span><span class="p">(</span><span class="n">X_train_yuv_normalize</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-            <span class="k">for</span> <span class="n">offset</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">num_examples</span><span class="p">,</span> <span class="n">BATCH_SIZE</span><span class="p">):</span>
-                <span class="n">end</span> <span class="o">=</span> <span class="n">offset</span> <span class="o">+</span> <span class="n">BATCH_SIZE</span>
-                <span class="n">batch_x</span><span class="p">,</span> <span class="n">batch_y</span> <span class="o">=</span> <span class="n">X_train_yuv_normalize</span><span class="p">[</span><span class="n">offset</span><span class="p">:</span><span class="n">end</span><span class="p">],</span> <span class="n">y_train</span><span class="p">[</span><span class="n">offset</span><span class="p">:</span><span class="n">end</span><span class="p">]</span>
-                <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">training_operation</span><span class="p">,</span> <span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="n">batch_x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">batch_y</span><span class="p">,</span> <span class="n">keep_prob</span> <span class="p">:</span> <span class="mf">0.5</span><span class="p">})</span> 
-<span class="c1">#                 training_operation.run(feed_dict={x : batch_x, y : batch_y, keep_prob : 0.5})</span>
-            <span class="n">validation_accuracy</span> <span class="o">=</span> <span class="n">evaluate</span><span class="p">(</span><span class="n">X_validation_yuv_normalize</span><span class="p">,</span> <span class="n">y_validation</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;EPOCH </span><span class="si">{}</span><span class="s2"> ...&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Validation Accuracy = </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">validation_accuracy</span><span class="p">))</span>
-        <span class="n">saver</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">sess</span><span class="p">,</span> <span class="n">SAVE_FILE</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model saved&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># So that the weights won&#39;t accidentally get overwritten</span>
+
+<span class="c1"># if LOAD:</span>
+<span class="c1">#     with tf.Session() as sess:</span>
+<span class="c1">#         saver.restore(sess, SAVE_FILE)</span>
+<span class="c1">#         num_examples = len(X_train_yuv_normalize)</span>
+<span class="c1">#         print(&quot;Training...&quot;)</span>
+<span class="c1">#         for i in range(EPOCHS):</span>
+<span class="c1">#             X_train_yuv_normalize, y_train = shuffle(X_train_yuv_normalize, y_train)</span>
+<span class="c1">#             for offset in range(0, num_examples, BATCH_SIZE):</span>
+<span class="c1">#                 # increment the global step</span>
+<span class="c1">#                 end = offset + BATCH_SIZE</span>
+<span class="c1">#                 batch_x, batch_y = X_train_yuv_normalize[offset:end], y_train[offset:end]</span>
+<span class="c1">#                 sess.run(training_operation, feed_dict={x: batch_x, y: batch_y, keep_prob : 0.5}) </span>
+<span class="c1"># #                 training_operation.run(feed_dict={x : batch_x, y : batch_y, keep_prob : 0.5})</span>
+<span class="c1"># #                 sess.run(increment_global_step_op)</span>
+<span class="c1">#                 print(increment_global_step_op.eval())</span>
+<span class="c1">#             validation_accuracy = evaluate(X_validation_yuv_normalize, y_validation)</span>
+<span class="c1">#             print(&quot;EPOCH {} ...&quot;.format(i+1))</span>
+<span class="c1">#             print(&quot;Validation Accuracy = {:.3f}&quot;.format(validation_accuracy))</span>
+<span class="c1">#         saver.save(sess, SAVE_FILE)</span>
+<span class="c1">#         print(&quot;Model saved&quot;)</span>
+<span class="c1"># else:</span>
     
-    <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
-        <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">global_variables_initializer</span><span class="p">())</span>
-        <span class="n">num_examples</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_train_yuv_normalize</span><span class="p">)</span>
+<span class="c1">#     with tf.Session() as sess:</span>
+<span class="c1">#         sess.run(tf.global_variables_initializer())</span>
+<span class="c1">#         num_examples = len(X_train_yuv_normalize)</span>
 
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Training...&quot;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">()</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">EPOCHS</span><span class="p">):</span>
-            <span class="n">X_train_yuv_normalize</span><span class="p">,</span> <span class="n">y_train</span> <span class="o">=</span> <span class="n">shuffle</span><span class="p">(</span><span class="n">X_train_yuv_normalize</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-            <span class="k">for</span> <span class="n">offset</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">num_examples</span><span class="p">,</span> <span class="n">BATCH_SIZE</span><span class="p">):</span>
-                <span class="n">end</span> <span class="o">=</span> <span class="n">offset</span> <span class="o">+</span> <span class="n">BATCH_SIZE</span>
-                <span class="n">batch_x</span><span class="p">,</span> <span class="n">batch_y</span> <span class="o">=</span> <span class="n">X_train_yuv_normalize</span><span class="p">[</span><span class="n">offset</span><span class="p">:</span><span class="n">end</span><span class="p">],</span> <span class="n">y_train</span><span class="p">[</span><span class="n">offset</span><span class="p">:</span><span class="n">end</span><span class="p">]</span>
-<span class="c1">#                 print(batch_x.shape)</span>
-                <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">training_operation</span><span class="p">,</span> <span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="n">batch_x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">batch_y</span><span class="p">,</span> <span class="n">keep_prob</span> <span class="p">:</span> <span class="mf">0.5</span><span class="p">})</span> 
-<span class="c1">#                 training_operation.run(feed_dict={x : batch_x, y : batch_y, keep_prob : 0.5})</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Evaluating&quot;</span><span class="p">)</span>
-            <span class="n">validation_accuracy</span> <span class="o">=</span> <span class="n">evaluate</span><span class="p">(</span><span class="n">X_validation_yuv_normalize</span><span class="p">,</span> <span class="n">y_validation</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;EPOCH </span><span class="si">{}</span><span class="s2"> ...&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Validation Accuracy = </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">validation_accuracy</span><span class="p">))</span>
+<span class="c1">#         print(&quot;Training...&quot;)</span>
+<span class="c1">#         print()</span>
+<span class="c1">#         for i in range(EPOCHS):</span>
+<span class="c1">#             X_train_yuv_normalize, y_train = shuffle(X_train_yuv_normalize, y_train)</span>
+<span class="c1">#             for offset in range(0, num_examples, BATCH_SIZE):</span>
+<span class="c1">#                 end = offset + BATCH_SIZE</span>
+<span class="c1">#                 batch_x, batch_y = X_train_yuv_normalize[offset:end], y_train[offset:end]</span>
+<span class="c1"># #                 print(batch_x.shape)</span>
+<span class="c1">#                 sess.run(training_operation, feed_dict={x: batch_x, y: batch_y, keep_prob : 0.5}) </span>
+<span class="c1"># #                 training_operation.run(feed_dict={x : batch_x, y : batch_y, keep_prob : 0.5})</span>
+<span class="c1"># #                 sess.run(increment_global_step_op)</span>
+<span class="c1">#                 print(increment_global_step_op.eval())</span>
 
-        <span class="n">saver</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">sess</span><span class="p">,</span> <span class="n">SAVE_FILE</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model saved&quot;</span><span class="p">)</span>
+<span class="c1">#             print(&quot;Evaluating&quot;)</span>
+<span class="c1">#             validation_accuracy = evaluate(X_validation_yuv_normalize, y_validation)</span>
+<span class="c1">#             print(&quot;EPOCH {} ...&quot;.format(i+1))</span>
+<span class="c1">#             print(&quot;Validation Accuracy = {:.3f}&quot;.format(validation_accuracy))</span>
+
+<span class="c1">#         saver.save(sess, SAVE_FILE)</span>
+<span class="c1">#         print(&quot;Model saved&quot;)</span>
 </pre></div>
 
 </div>
@@ -16168,16 +16146,499 @@ theta.get_shape()
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Training...
+5893
+5894
+5895
+5896
+5897
+5898
+5899
+5900
+5901
+5902
+5903
+5904
+5905
+5906
+5907
+5908
+5909
+5910
+5911
+5912
+5913
+5914
+5915
+5916
+5917
+5918
+5919
+5920
+5921
+5922
+5923
+5924
+5925
+5926
+5927
+5928
+5929
+5930
+5931
+5932
+5933
+5934
+5935
+5936
+5937
+5938
+5939
+5940
+5941
+5942
+5943
+5944
+5945
+5946
+5947
+5948
+5949
+5950
+5951
+5952
+5953
+5954
+5955
+5956
+5957
+5958
+5959
+5960
+5961
+5962
+5963
+5964
+5965
+5966
+5967
+5968
+5969
+5970
+5971
+5972
+5973
+5974
+5975
+5976
+5977
+5978
+5979
+5980
+5981
+5982
+5983
+5984
+5985
+5986
+5987
+5988
+5989
+5990
+5991
+5992
+5993
+5994
+5995
+5996
+5997
+5998
+5999
+6000
+6001
+6002
+6003
+6004
+6005
+6006
+6007
+6008
+6009
+6010
+6011
+6012
+6013
+6014
+6015
+6016
+6017
+6018
+6019
+6020
+6021
+6022
+6023
+6024
+6025
+6026
+6027
+6028
+6029
+6030
+6031
+6032
+6033
+6034
+6035
+6036
+6037
+6038
+6039
+6040
+6041
+6042
+6043
+6044
+6045
+6046
+6047
+6048
+6049
+6050
+6051
+6052
+6053
+6054
+6055
+6056
+6057
+6058
+6059
+6060
+6061
+6062
+6063
+6064
+6065
+6066
+6067
+6068
+6069
+6070
+6071
+6072
+6073
+6074
+6075
+6076
+6077
+6078
+6079
+6080
+6081
+6082
+6083
+6084
+6085
+6086
+6087
+6088
+6089
+6090
+6091
+6092
+6093
+6094
+6095
+6096
+6097
+6098
+6099
+6100
+6101
+6102
+6103
+6104
+6105
+6106
+6107
+6108
+6109
+6110
+6111
+6112
+6113
+6114
+6115
+6116
+6117
+6118
+6119
+6120
+6121
+6122
+6123
+6124
+6125
+6126
+6127
+6128
+6129
+6130
+6131
+6132
+6133
+6134
+6135
+6136
+6137
+6138
+6139
+6140
+6141
+6142
+6143
+6144
+6145
+6146
+6147
+6148
+6149
+6150
+6151
+6152
+6153
+6154
+6155
+6156
+6157
+6158
+6159
+6160
+6161
+6162
+6163
+6164
+6165
+6166
+6167
+6168
+6169
+6170
+6171
+6172
+6173
+6174
+6175
+6176
+6177
+6178
+6179
+6180
+6181
+6182
+6183
+6184
+6185
+6186
+6187
+6188
+6189
+6190
+6191
+6192
+6193
+6194
+6195
+6196
+6197
+6198
+6199
+6200
+6201
+6202
+6203
+6204
+6205
+6206
+6207
+6208
+6209
+6210
+6211
+6212
+6213
+6214
+6215
+6216
+6217
+6218
+6219
+6220
+6221
+6222
+6223
+6224
+6225
+6226
+6227
+6228
+6229
+6230
+6231
+6232
+6233
+6234
+6235
+6236
+6237
+6238
+6239
+6240
+6241
+6242
+6243
+6244
+6245
+6246
+6247
+6248
+6249
+6250
+6251
+6252
+6253
+6254
+6255
+6256
+6257
+6258
+6259
+6260
+6261
+6262
+6263
+6264
+6265
+6266
+6267
+6268
+6269
+6270
+6271
+6272
+6273
+6274
+6275
+6276
+6277
+6278
+6279
+6280
+6281
+6282
+6283
+6284
+6285
+6286
+6287
+6288
+6289
+6290
+6291
+6292
+6293
+6294
+6295
+6296
+6297
+6298
+6299
+6300
+6301
+6302
+6303
+6304
+6305
+6306
+6307
+6308
+6309
+6310
+6311
+6312
+6313
+6314
+6315
+6316
+6317
+6318
+6319
+6320
+6321
+6322
+6323
+6324
+6325
+6326
+6327
+6328
+6329
+6330
+6331
+6332
+6333
+6334
+6335
+6336
+6337
+6338
+6339
+6340
+6341
+6342
+6343
+6344
+6345
+6346
+6347
+6348
+6349
+6350
+6351
+6352
+6353
+6354
+6355
+6356
+6357
+6358
+6359
+6360
+6361
+6362
+6363
+6364
+6365
+6366
+6367
+6368
+6369
+6370
+6371
+6372
+6373
+6374
+6375
+6376
+6377
+6378
+6379
+6380
+6381
+6382
+6383
 EPOCH 1 ...
-Validation Accuracy = 0.955
-EPOCH 2 ...
-Validation Accuracy = 0.982
-EPOCH 3 ...
-Validation Accuracy = 0.987
-EPOCH 4 ...
-Validation Accuracy = 0.988
-EPOCH 5 ...
-Validation Accuracy = 0.992
+Validation Accuracy = 0.991
 Model saved
 </pre>
 </div>
@@ -16189,7 +16650,7 @@ Model saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Use the test set to see the accuracy</span>
@@ -16211,7 +16672,7 @@ Model saved
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Accuracy of test set is: 0.9604117274284363
+<pre>Accuracy of test set is: 0.9626286625862122
 </pre>
 </div>
 </div>
@@ -16226,6 +16687,16 @@ Model saved
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Question-4">Question 4<a class="anchor-link" href="#Question-4">&#182;</a></h3><p><em>How did you train your model? (Type of optimizer, batch size, epochs, hyperparameters, etc.)</em></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The model was trained by using a AdamOptimizer with a piecewise constant learning rate starting at 1-e3 then changing to 1e-4 at 500 steps (roughly 1.3 epochs) into training. This is done to make the training of the network faster.</p>
 
 </div>
 </div>
