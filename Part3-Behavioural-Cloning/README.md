@@ -6,9 +6,9 @@ python drive.py model.json
 ```
 
 Or if you do not have the dependencies to run the simulation, here is a [link](https://www.youtube.com/watch?v=JCe66L3dwA0) to the video.
-#### 3. Submssion code is usable and readable
+#### Explaination
 
-The model.py file contains the code for training and saving the convolution neural network. The file shows the pipeline I used for training and validating the model, and it contains comments to explain how the code works.
+The model.py file contains the code for training and saving the convolution neural network, although this file is mostly bits and pieces from the Behavioural Cloning.ipynb. The Behavioural Cloning.ipynb has all the code that I used to preprocess, train and evaluate the model, which is of more interest (and prettier) than the model.py file
 
 ### Model Architecture and Training Strategy
 
