@@ -27,10 +27,6 @@ I then used the output `objpoints` and `imgpoints` to compute the camera calibra
 
 ![alt text][image1]
 
-I also obtained this result for the before and after images for the road:
-![alt text][image2]
-
-
 ###Pipeline (single images)
 
 ####1. Provide an example of a distortion-corrected image.
