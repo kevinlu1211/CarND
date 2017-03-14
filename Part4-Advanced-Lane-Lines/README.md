@@ -35,7 +35,8 @@ To demonstrate this step, I will describe how I apply the distortion correction 
 ####2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 In this section I did a lot of experiment with 2 kinds of images the first was using a combination of the RGB, HLS, and LAB image spaces. This can be seen through the code cells 25-45. I used R, G channels from the RGB color space, the L, B channnels from the LAB color space, and the S channel from the HLS color space. Then using these channels, I did various graident and magnitude thresholding methods to each the lane lines for each color channel and then stacked them on top of each other. I obtained this as a result:
 ![alt text][image3]
-Now to get rid of the noise, I thresholded it by seeing each pixel in the image had a value of greater than 3, as I had use 6 thresholded images. If the value was greater or equal to 3 then the pixel stays, if not then it is set to 0. I obtained this as a result
+Now to get rid of the noise, I thresholded it by setting each pixel in the image had a value of greater than 3, as I had use 6 thresholded images (similar to heatmap thresholding). If the value was greater or equal to 3 then the pixel stays, if not then it is set to 0. I obtained this as a result
+
 ![alt text][image4]
 
 The second kind of images that I experimented with were the tophat transforms of the RGB, HLS and, LAB channels. Although I will not go into further detail as they were not used. If you are interested though, thery are in cells 50-75.
@@ -64,14 +65,13 @@ I verified that my perspective transform was working as expected by drawing the 
 
 ####4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
-Then I fit a 2 degree polynomial function on the perspective transformed binary image in cells x-x and I got this as a result:
-
+Then I fit a 2 degree polynomial function on the perspective transformed binary image in cells 81 and I got this as a result:
 
 ![alt text][image7]
 
 ####5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
-The radius of curvature and the offset from the center of lane were calculated in cells x-x. The radius of curvature was calculated from the equation taken from [here](http://www.intmath.com/applications-differentiation/8-radius-curvature.php) and the offset was simply calculated by taking the difference in pixel values between the base of the left and right lane lines, then converting that value into meters
+The radius of curvature and the offset from the center of lane were calculated in cells 82-83. The radius of curvature was calculated from the equation taken from [here](http://www.intmath.com/applications-differentiation/8-radius-curvature.php) and the offset was simply calculated by taking the difference in pixel values between the base of the left and right lane lines, then converting that value into meters
 
 ####6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
