@@ -2,7 +2,7 @@
 
 #### TODO:
 - Add another [spatial transformer](https://arxiv.org/pdf/1506.02025.pdf) layer in the middle of the conv layers, instead of just at the beginning
-- Use [center loss](http://ydwen.github.io/papers/WenECCV16.pdf) as the loss instead of just the cross entropy
+- Use [center loss](http://ydwen.github.io/papers/WenECCV16.pdf) as the loss instead of just the cross-entropy loss
 - Have a look at the model architecture for a single column in [MCDNN](http://people.idsia.ch/~juergen/nn2012traffic.pdf) for Traffic Sign Classification
 
 ### Overview
