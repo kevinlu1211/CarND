@@ -1,14 +1,5 @@
 ## Advanced Lane Finding
 
-#### TODO:
-- Add another [spatial transformer](https://arxiv.org/pdf/1506.02025.pdf) layer in the middle of the conv layers, instead of just at the beginning
-- Use [center loss](http://ydwen.github.io/papers/WenECCV16.pdf) as the loss instead of just the cross entropy
-- Have a look at the model architecture for a single column in [MCDNN](http://people.idsia.ch/~juergen/nn2012traffic.pdf) for Traffic Sign Classification
-
-#### Explaination
-This is an ongoing project that I have, the purpose of which is to play around and  implement various network architectures from scratch and using various loss functions so that I can have a better understanding of Tensorflow. So far I have implemented:
-    - LeNet, and LeNet with Spatial Transformers
-    - Inception (although only one layer deep due to computing limitations)
 
 
 #### Structure of the code files

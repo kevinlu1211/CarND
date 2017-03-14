@@ -1,8 +1,17 @@
-## Project: Build a Traffic Sign Recognition Program
-[![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
-### Overview
+## Buildinf a Traffic Sign Recognition Program
 
-In this project, you will use what you've learned about deep neural networks and convolutional neural networks to classify traffic signs. You will train a model so it can decode traffic signs from natural images by using the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset). After the model is trained, you will then test your model program on new images of traffic signs you find on the web, or, if you're feeling adventurous pictures of traffic signs you find locally!
+#### TODO:
+- Add another [spatial transformer](https://arxiv.org/pdf/1506.02025.pdf) layer in the middle of the conv layers, instead of just at the beginning
+- Use [center loss](http://ydwen.github.io/papers/WenECCV16.pdf) as the loss instead of just the cross entropy
+- Have a look at the model architecture for a single column in [MCDNN](http://people.idsia.ch/~juergen/nn2012traffic.pdf) for Traffic Sign Classification
+
+### Overview
+In this project, I will use deep neural networks and convolutional neural networks to classify traffic signs, exploring many different architectures and various loss functions. I will train a model on the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset). 
+
+This is an ongoing project that I have, the purpose of which is to play around and  implement various network architectures from scratch and using various loss functions so that I can have a better understanding of Tensorflow. So far I have implemented:
+- LeNet, and LeNet with Spatial Transformers
+- Inception (although only one layer deep due to computing limitations)
+
 
 ### Dependencies
 
