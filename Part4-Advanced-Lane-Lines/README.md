@@ -68,7 +68,7 @@ I verified that my perspective transform was working as expected by drawing the 
 
 ####4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
-Then I fit a 2 degree polynomial function on the perspective transformed binary image in cells x-x and I got this as a result
+Then I fit a 2 degree polynomial function on the perspective transformed binary image in cells x-x and I got this as a result:
 
 
 ![alt text][image7]
