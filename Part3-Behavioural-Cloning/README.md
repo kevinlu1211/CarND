@@ -21,6 +21,7 @@ The goals / steps of this project are the following:
 [image5]: ./examples/placeholder_small.png "Recovery Image"
 [image6]: ./examples/placeholder_small.png "Normal Image"
 [image7]: ./examples/placeholder_small.png "Flipped Image"
+[image8]: model.png "Model"
 
 ## Rubric Points
 Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
@@ -90,7 +91,7 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 
 Here is a visualization of the final model architecture
 
-![Model Visualization](https://github.com/kevinlu1211/CarND/tree/master/Part3-Behavioural-Cloning/model.png)
+![Model Visualization][image8]
 
 #### 3. Creation of the Training Set & Training Process
 
