@@ -9,8 +9,8 @@ The Lane Detection.ipynb provides a better picture of all the things that I have
 [image2]: ./README_images/chessboard_calibration.png "Road Transformed"
 [image3]: ./README_images/stacked_image.png "Stacked Image"
 [image4]: ./README_images/thresholded_stacked_image.png "Thresholded Stacked Image"
-[image5]: ./README_images/perspective_transformed_points.png "Thresholded Stacked Image"
-[image6]: ./README_images/perspective_transformed_binary.png "Binary Stacked Image"
+[image5]: ./README_images/perspective_transformed_points.png "Perspective Transformed Thresholded Stacked Image"
+[image6]: ./README_images/perspective_transformed_binary.png "Perspetive Transformed Binary Stacked Image"
 [image7]: ./README_images/binary_fitted_lanes.png "Binary Fitted Lane Image"
 [image8]: ./README_images/filled_lane_line.png "Filled Lane Line"
 
