@@ -1,14 +1,16 @@
 # **Behavioral Cloning** 
 
+#### Explaination
+
+The model.py file contains the code for training and saving the convolution neural network, although this file is mostly bits and pieces from the Behavioural Cloning.ipynb. The Behavioural Cloning.ipynb has all the code that I used to preprocess, train and evaluate the model, which is of more interest (and prettier) than the model.py file
+
 Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
 ```sh
 python drive.py model.json
 ```
 
 Or if you do not have the dependencies to run the simulation, here is a [link](https://www.youtube.com/watch?v=JCe66L3dwA0) to the video.
-#### Explaination
 
-The model.py file contains the code for training and saving the convolution neural network, although this file is mostly bits and pieces from the Behavioural Cloning.ipynb. The Behavioural Cloning.ipynb has all the code that I used to preprocess, train and evaluate the model, which is of more interest (and prettier) than the model.py file
 
 ### Model Architecture and Training Strategy
 
