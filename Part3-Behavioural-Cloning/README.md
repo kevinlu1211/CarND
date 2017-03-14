@@ -49,7 +49,7 @@ In order to gauge how well the model was working, I split my image and steering 
 
 To combat the overfitting, I modified the model by adding a dropout layer after the Flatten layer, which improved the test error a bit.
 
-The final step was to run the simulator to see how well the car was driving around track one. There were a few spots where the vehicle fell off the track and I really had no idea what was happening as it seemed that I wasn't overfitting and the test error seemed pretty low. I found out the problem by going back to plotting the images out, and realising that the Udacity data had too many images with a steering angle of 0 which made the car bias to driving straight (into the water LOL). I remedied this by creating a few functions that created more training data. Which will be explain below.
+The final step was to run the simulator to see how well the car was driving around track one. There were a few spots where the vehicle fell off the track and I really had no idea what was happening as it seemed that I wasn't overfitting and the test error seemed pretty low. I found out the problem by going back to plotting the images out, and realising that the Udacity data had too many images with a steering angle of 0 which made the car bias to driving straight into the water. I remedied this by creating a few functions that created more training data. Which will be explained below.
 
 At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
 
