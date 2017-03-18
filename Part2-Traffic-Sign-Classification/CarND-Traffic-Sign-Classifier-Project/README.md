@@ -1,6 +1,5 @@
 ## Building a Traffic Sign Recognition Program
 
-## NOTE: This is an implementation for the Self-Driving Car Udacity Nanodegree, here is a condensed version which 
 #### TODO:
 - Add another [spatial transformer](https://arxiv.org/pdf/1506.02025.pdf) layer in the middle of the conv layers, instead of just at the beginning
 - Use [center loss](http://ydwen.github.io/papers/WenECCV16.pdf) as the loss instead of just the cross-entropy loss
@@ -9,9 +8,7 @@
 ### Overview
 In this project, I will use deep neural networks and convolutional neural networks to classify traffic signs, exploring many different architectures and various loss functions. I will train a model on the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset). 
 
-This is an ongoing project that I have, the purpose of which is to play around and  implement various network architectures from scratch and using various loss functions so that I can have a better understanding of Tensorflow. So far I have implemented:
-- LeNet, and LeNet with Spatial Transformers
-- Inception (although only one layer deep due to computing limitations)
+This is an ongoing project that I have, the purpose of which is to play around and  implement various network architectures from scratch and using various loss functions so that I can have a better understanding of Tensorflow. Please see the `Traffic_Sign_Classifier.ipynb` notebook to see the implementations.
 
 
 ### Dependencies
