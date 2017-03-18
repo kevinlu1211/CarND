@@ -14,7 +14,7 @@ The goals / steps of this project are the following:
 [image3]: ./README_images/lab_bb.png
 [image4]: ./README_images/hsv_bb.png
 [image5]: ./README_images/lab_hm.png
-[image6]: ./README_images/lab_bb.png
+[image6]: ./README_images/lab_nms.png
 [image7]: ./README_images/5_video_frames.png
 
 
@@ -54,7 +54,7 @@ The sliding window search was implemented in cell 27 of the notebook. The `scale
 
 #### 2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
 
-Ultimately I searched on five scales using LAB HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result.  Here are some example images:
+Ultimately I searched on five scales using LAB HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result.  
 
 
 #### Here is an example of the bounding boxes found by the sliding window search on the LAB color space:
@@ -65,13 +65,14 @@ Ultimately I searched on five scales using LAB HOG features plus spatially binne
 
 ![alt text][image4]
 
+As mentioned above, the HSV spaces seems to have more false positives than the LAB space.
 
 ---
 
 ### Video Implementation
 
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (somewhat wobbly or unstable bounding boxes are ok as long as you are identifying the vehicles most of the time with minimal false positives.)
-Here's a [link to my video result](https://www.youtube.com/edit?o=U&video_id=0c9tmgVvgxw) note that this video combines the lane detection algorithm, the code for that can be found [here](https://github.com/kevinlu1211/CarND/tree/master/Part4-Advanced-Lane-Lines)
+Here's a [link to my video result](https://www.youtube.com/edit?o=U&video_id=0c9tmgVvgxw) note that this video combines the [lane detection algorithm] (https://github.com/kevinlu1211/CarND/tree/master/Part4-Advanced-Lane-Lines) with the vehicle detection algorithm.
 
 
 #### 2. Describe how (and identify where in your code) you implemented some kind of filter for false positives and some method for combining overlapping bounding boxes.
@@ -97,6 +98,7 @@ It is evident that the boxes aren't merging that well, and regardless of what pa
 
 ![alt text][image7]
 
+The left column shows the output of the bounding boxes found without the threshold. The second column is the bounding boxes drawn on the thresholded heatmaps (which gets rid of the false positives). The third column is the thresholded heatmap.
 
 ---
 
@@ -106,4 +108,4 @@ It is evident that the boxes aren't merging that well, and regardless of what pa
 
 The main issue that I faced in my implementation of this project wqas trying to find the correct scales and parameters used to produce the bounding boxes. As the majority of the predictive power of my model comes from the HOG features, if there are cases where the lane lines look like the HOG features of the car it would fail there, creating a lot of false positives. 
 
-I believe that this pipeline could be made more robust by using Udacity's images which has the bounding boxes for cars, and using a CNN to detect, and predict the bounding boxes for the cars. Moreover, since the bounding boxes are not restricted to squares, I believe that NMS would work better. Here is a [paper about face alignment using Multi-Task CNNs](https://kpzhang93.github.io/MTCNN_face_detection_alignment/paper/spl.pdf)that I have been reading, and I believe that if I re-train the classification and bounding box regression layers of the network then I would be able to use to for the new and improved version of this pipeline.
+I believe that this pipeline could be made more robust by using Udacity's images which has the bounding boxes for cars, and using a CNN to detect, and predict the bounding boxes for the cars. Moreover, since the bounding boxes are not restricted to squares, I believe that NMS would work better. Here is a [paper about face alignment using Multi-Task CNNs](https://kpzhang93.github.io/MTCNN_face_detection_alignment/paper/spl.pdf) that I have been reading, and I believe that if I re-train the classification and bounding box regression layers of the network then I would be able to use to for the new and improved version of this pipeline.
