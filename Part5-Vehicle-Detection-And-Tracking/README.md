@@ -1,4 +1,5 @@
 **Vehicle Detection Project**
+#### Note: Please see the [first part](https://github.com/kevinlu1211/CarND/tree/master/Part4-Advanced-Lane-Lines) of the project if you are interested in seeing how the lane lines were detected. This part of the project is only for the detection of vehicles
 
 The goals / steps of this project are the following:
 
@@ -72,7 +73,7 @@ As mentioned above, the HSV spaces seems to have more false positives than the L
 ### Video Implementation
 
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (somewhat wobbly or unstable bounding boxes are ok as long as you are identifying the vehicles most of the time with minimal false positives.)
-Here's a [link to my video result](https://www.youtube.com/watch?v=0c9tmgVvgxw) note that this video combines the [lane detection algorithm] (https://github.com/kevinlu1211/CarND/tree/master/Part4-Advanced-Lane-Lines) with the vehicle detection algorithm.
+Here's a [link to my video result](https://www.youtube.com/watch?v=0c9tmgVvgxw) note that this video combines the [lane detection algorithm](https://github.com/kevinlu1211/CarND/tree/master/Part4-Advanced-Lane-Lines) with the vehicle detection algorithm.
 
 
 #### 2. Describe how (and identify where in your code) you implemented some kind of filter for false positives and some method for combining overlapping bounding boxes.

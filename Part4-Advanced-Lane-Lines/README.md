@@ -1,7 +1,5 @@
 ## Advanced Lane Finding
 
-
-
 #### Structure of the code files
 The Lane Detection.ipynb provides a better picture of all the things that I have tried in trying to recognize the lane lines, such as using different thresholds for the sobel operator, or using different color spaces and different transforms (such as the tophat transform). Although if those things don't interest you here is a [link to my video result](https://youtu.be/TjinyUHjR_8).
 
