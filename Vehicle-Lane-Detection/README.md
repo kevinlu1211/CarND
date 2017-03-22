@@ -1,4 +1,9 @@
-## Advanced Lane Finding
+# Lane and Vehicle detection
+
+## Overview
+This is a pipeline that I wrote to detect lane lines and vehicles from a video feed shot by a camera mounted ontop of a car. There are two sections, the first is lane line finding, the second being vehicle detection. My pipeline is described in high detail below although if you're interested in the code please see download `Lane-Vehicle+detection.html`. Here is a link to [my final video result](https://www.youtube.com/watch?v=0c9tmgVvgxw).
+
+## Lane Line Finding
 
 #### Structure of the code files
 The Lane Detection.ipynb provides a better picture of all the things that I have tried in trying to recognize the lane lines, such as using different thresholds for the sobel operator, or using different color spaces and different transforms (such as the tophat transform). Although if those things don't interest you here is a [link to my video result](https://youtu.be/TjinyUHjR_8).
