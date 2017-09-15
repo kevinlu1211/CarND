@@ -6,4 +6,4 @@
 *.mp4
 *.png
 *.mov
-!*/README_images
+!*/README_images/*.png
