@@ -1,7 +1,3 @@
-/*
-!.gitignore
-!Part4-Advanced-Lane-Lines/README_images/
-!*/
 *.p
 *.npy
 *.pickle
@@ -10,3 +6,4 @@
 *.mp4
 *.png
 *.mov
+!*/README_images
