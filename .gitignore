@@ -1,6 +1,6 @@
 /*
 !.gitignore
-!Part*/README_images/
+!Part4-Advanced-Lane-Lines/README_images/
 !*/
 *.p
 *.npy
