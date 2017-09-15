@@ -1,6 +1,6 @@
 /*
 !.gitignore
-!README_images/
+!Part*/README_images/
 !*/
 *.p
 *.npy
